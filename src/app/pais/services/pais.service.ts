@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
+import { Country } from '../interfaces/pais.inteface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,10 +12,13 @@ export class PaisService {
   
   constructor(private http: HttpClient) { }
 
-  bucarPais(termino:string): Observable<any>{
+  bucarPais(termino:string): Observable<Country>{
     const url = `${this.apiUrl}/name/${termino}`;
 
-    return this.http.get(url);
+    return this.http.get<Country>(url);
+      // .pipe(
+      //   catchError(err => of([]))
+      // ); Regresa el valor especificado
   }
 
 }
