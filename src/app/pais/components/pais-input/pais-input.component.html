@@ -5,5 +5,6 @@
         placeholder="Buscar País"
         class="form-control"
         [(ngModel)]="termino"
-        (keyup.enter)="buscar()">
+        (keyup.enter)="buscar()"
+        (input)="teclaPresionada()">
 </form>
