@@ -25,7 +25,7 @@ export class VerPaisComponent implements OnInit {
         tap(console.log) //reibe el producto anterior
       )
       .subscribe(pais => {
-        this.pais = pais[0];
+        this.pais = pais;
         console.log(this.pais)
       })
     // this.activatedRoute.params
