@@ -1,0 +1,9 @@
+<form autocomplete="off">
+    <input 
+        type="search" 
+        name="termino" 
+        placeholder="Buscar País"
+        class="form-control"
+        [(ngModel)]="termino"
+        (keyup.enter)="buscar()">
+</form>
