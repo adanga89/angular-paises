@@ -6,6 +6,7 @@ import { PaisService } from '../../services/pais.service';
   selector: 'app-por-capital',
   templateUrl: './por-capital.component.html',
   styles: [
+    `li {cursor: pointer}`
   ]
 })
 export class PorCapitalComponent {
@@ -13,7 +14,7 @@ export class PorCapitalComponent {
   termino:string ="";
   hayError: boolean = false;
   paises: Country[] = [];
-
+ 
   constructor(private paisService: PaisService){
 
   }
